@@ -166,7 +166,7 @@ namespace WebChat.Controllers
             }
             else
             {
-                var resposta = new ResponseApi { resposta = "Prezado(a), selecione uma das opções abaixo:\n\n [1] Inventário; \n [2] Emitir GTA para outra propriedade; \n [3] Verificar minhas pendências; \n [4] Falar com um atendente." };
+                var resposta = new ResponseApi { resposta = "Parece que não conseguimos compreender totalmente sua pergunta. Poderia, por favor, reformulá-la para que possamos ajudar da melhor maneira possível?" };
                 return Json(resposta);
             }
         }

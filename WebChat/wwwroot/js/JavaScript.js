@@ -3,8 +3,10 @@
     $("#Enviar").click(
         function () {
 
+            // Traz a variável mensagem do index
             var mensagem = $("#mensagem").val();
 
+            // Traz o método HttpPost do controller
             var stringUrl = "api/Chat";
 
             $.ajax({
@@ -15,12 +17,12 @@
 
                 success: function (data) {
 
-                    let now = new Date();
-                    let formattedDate = now.toLocaleString();
+                    let date = new Date();
+                    let formattedDate = date.toLocaleString();
 
                     $("#displaymensagem").append("\nEduardo Rodolfo de Simas:\n " + mensagem + "\n" + formattedDate + "\n");
     
-                    $("#displaymensagem").append("\nGrazi: \n" + data.resposta + "\n" + formattedDate + "\n");
+                    $("#displaymensagem").append("\nBot: \n" + data.resposta + "\n" + formattedDate + "\n");
 
                     $("#mensagem").val("");
                 }
