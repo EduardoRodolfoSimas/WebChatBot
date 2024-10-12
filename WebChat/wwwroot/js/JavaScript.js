@@ -1,32 +1,33 @@
 ﻿$(function () {
+    $("#Enviar").click(function () {
+        // Traz a variável mensagem do input
+        var mensagem = $("#mensagem").val();
+        // Traz o método HttpPost do controller
+        var stringUrl = "api/Chat";
 
-    $("#Enviar").click(
-        function () {
+        $.ajax({
+            type: "POST",
+            url: stringUrl,
+            async: false,
+            data: { mensagem: mensagem },
 
-            // Traz a variável mensagem do index
-            var mensagem = $("#mensagem").val();
+            success: function (data) {
+                // Cria uma data para ser colocada junto à mensagem
+                let date = new Date();
+                let formattedDate = date.toLocaleString();
 
-            // Traz o método HttpPost do controller
-            var stringUrl = "api/Chat";
+                // Mensagem do usuário
+                var mensagemUsuario = `<div class="mensagem-usuario"><strong>Eduardo Rodolfo de Simas:</strong><br>${mensagem.replace(/\n/g, "<br>")}<small>${formattedDate}</small></div>`;
+                // Mensagem do bot
+                var mensagemBot = `<div class="mensagem-bot"><strong>Bot:</strong><br>${data.resposta.replace(/\n/g, "<br>")}<small>${formattedDate}</small></div>`;
 
-            $.ajax({
-                type: "POST",
-                url: stringUrl,
-                async: false,
-                data: { mensagem : mensagem },
+                // Atualiza a div com as novas mensagens
+                $("#displaymensagem").append(mensagemUsuario + "<br>" + mensagemBot + "<br>"); // Adiciona as novas mensagens
 
-                success: function (data) {
-
-                    let date = new Date();
-                    let formattedDate = date.toLocaleString();
-
-                    $("#displaymensagem").append("\nEduardo Rodolfo de Simas:\n " + mensagem + "\n" + formattedDate + "\n");
-    
-                    $("#displaymensagem").append("\nBot: \n" + data.resposta + "\n" + formattedDate + "\n");
-
-                    $("#mensagem").val("");
-                }
-            });
-        }
-    );
+                $("#mensagem").val(""); // Limpa o campo de mensagem
+                // Rola para o final do container
+                $("#displaymensagem").scrollTop($("#displaymensagem")[0].scrollHeight);
+            }
+        });
+    });
 });

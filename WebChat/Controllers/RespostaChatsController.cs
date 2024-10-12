@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -156,6 +157,7 @@ namespace WebChat.Controllers
         [HttpPost("api/Chat")]
         public async Task<JsonResult> Chat(RequestApi request)
         {
+            Console.WriteLine("Ola, que bom ver você por aqui!");
             var respostaChat = await _context.RespostaChat.Where(m => m.Mensagem.ToUpper().Contains(request.mensagem.ToUpper())).FirstOrDefaultAsync();
 
             if (respostaChat != null)

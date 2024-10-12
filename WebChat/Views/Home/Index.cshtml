@@ -2,19 +2,15 @@
     ViewData["Title"] = "Home Page";
 }
 <br />
-
 <div class="container">
-
     <div class="col-md-12" style="text-align:center">
-
-        <textarea id="displaymensagem" cols="100" rows="20"></textarea>
-
+        <div id="displaymensagem" class="mensagem-container" contenteditable="false"></div>
         <br />
-        <label>Mensagem:</label> <input type="text" id="mensagem" style="width:608px"/>
+        <label id="Mensagem">Mensagem:</label>
+        <input type="text" id="mensagem" style="width:608px" />
         <input id="Enviar" type="button" value="Enviar" />
-
     </div>
-
 </div>
+
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <script src="~/js/javascript.js"></script>
