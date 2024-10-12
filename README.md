@@ -10,3 +10,11 @@ A interface é projetada para ser intuitiva e amigável, exibindo as mensagens d
 - **JavaScript**: Para a lógica de interação e requisições assíncronas.
 - **ASP.NET Core**: Framework para desenvolvimento da aplicação backend, gerenciando as requisições do chatbot.
 - **SQL Server**: Banco de dados relacional utilizado para armazenar dados do chatbot.
+
+# Funcionamento
+
+- Execute o código no VSCode/VS e aguarde uma janela do navegador abrir;
+- Clique em 'Resposta Chat' e 'Create New';
+- Insira no campo 'Mensagem' o que o solicitante deve mandar;
+- Insira no campo 'Resposta' o que o bot deve responder.
+  
