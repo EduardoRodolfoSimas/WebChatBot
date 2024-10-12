@@ -11,7 +11,7 @@ A interface é projetada para ser intuitiva e amigável, exibindo as mensagens d
 - **ASP.NET Core**: Framework para desenvolvimento da aplicação backend, gerenciando as requisições do chatbot.
 - **SQL Server**: Banco de dados relacional utilizado para armazenar dados do chatbot.
 
-# Funcionamento
+## Funcionamento
 
 - Execute o código no VSCode/VS e aguarde uma janela do navegador abrir;
 - Clique em 'Resposta Chat' e 'Create New';
