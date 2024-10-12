@@ -1,10 +1,4 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebChat.Models;
 
@@ -157,7 +151,6 @@ namespace WebChat.Controllers
         [HttpPost("api/Chat")]
         public async Task<JsonResult> Chat(RequestApi request)
         {
-            Console.WriteLine("Ola, que bom ver você por aqui!");
             var respostaChat = await _context.RespostaChat.Where(m => m.Mensagem.ToUpper().Contains(request.mensagem.ToUpper())).FirstOrDefaultAsync();
 
             if (respostaChat != null)
@@ -172,7 +165,5 @@ namespace WebChat.Controllers
                 return Json(resposta);
             }
         }
-
-
     }
 }

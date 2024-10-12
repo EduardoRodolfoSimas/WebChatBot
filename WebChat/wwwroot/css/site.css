@@ -6,7 +6,7 @@
     background-color: whitesmoke;
     overflow-y: auto;
     border-radius: 10px;
-    margin: 20px auto; 
+    margin:auto; 
     font-size: 14px;
     white-space: pre-wrap;
     display: flex;
