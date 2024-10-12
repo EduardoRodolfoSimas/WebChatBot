@@ -16,5 +16,5 @@ A interface é projetada para ser intuitiva e amigável, exibindo as mensagens d
 - Execute o código no VSCode/VS e aguarde uma janela do navegador abrir;
 - Clique em 'Resposta Chat' e 'Create New';
 - Insira no campo 'Mensagem' o que o solicitante deve mandar;
-- Insira no campo 'Resposta' o que o bot deve responder.
-  
+- Insira no campo 'Resposta' o que o bot deve responder;
+- Clique em 'Create' e volte a tela inicial 'Home' para testar;
